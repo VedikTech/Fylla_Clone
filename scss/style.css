@@ -130,7 +130,7 @@ main .view_1 img {
   border-radius: 1rem;
 }
 main .view_2 {
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 main .view_2 .our_service_1 {
   display: flex;
@@ -182,8 +182,61 @@ main .view_2 .our_service_2 .services .head_service {
   opacity: 0.8;
   margin-bottom: 10px;
 }
-main .view_2 .our_service_2 hr {
-  margin-bottom: 10px;
+main .section_end {
+  margin-top: 4rem;
+  border: 1px solid black;
+}
+main .view_3 {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+main .view_3 .view_3_leftside h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+main .view_3 .view_3_leftside p {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  width: 70%;
+}
+main .view_3 .videos_box {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+main .view_3 .videos_box .video video {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  padding-top: 1rem;
+}
+main .view_3 .videos_box .video .name {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+main .view_3 .videos_box .video .post {
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+main .view_3 .line {
+  margin-top: 1rem;
+}
+main .view_3 .line div {
+  height: 1px;
+  width: 100%;
+  background-color: black;
 }
 
 @media (min-width: 1020px) {
@@ -193,5 +246,44 @@ main .view_2 .our_service_2 hr {
   main .view_1 h1 {
     width: 100%;
     font-size: 7rem;
+  }
+  main .view_2 {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  main .view_2 .our_service_1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main .view_2 .line {
+    margin-right: 40px;
+  }
+  main .view_2 .line div {
+    height: 100%;
+    width: 1px;
+    opacity: 0.7;
+    background-color: black;
+  }
+  main .view_3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  main .view_3 .videos_box {
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+  }
+  main .view_3 .line {
+    margin-right: 1rem;
+  }
+  main .view_3 .line div {
+    height: 100%;
+    width: 1px;
+    opacity: 0.7;
+    background-color: black;
   }
 }/*# sourceMappingURL=style.css.map */

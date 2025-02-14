@@ -166,13 +166,14 @@ main
 
     .view_2
     {
-        margin-top: 2rem;
+       padding-top: 2rem;
         .our_service_1
         {
             @include flex;
             flex-direction: column;
             row-gap: 30px;
-            div{
+            div
+            {
                 .service_heading
                 {
                     @include heading_opacity;
@@ -192,7 +193,8 @@ main
             }
             
         }
-        .line{
+        .line
+        {
           
            margin-top:4rem;
 
@@ -204,7 +206,7 @@ main
         }
 
         .our_service_2
-    {
+       {
         @include flex;
         flex-direction: column;
         row-gap:20px;
@@ -228,14 +230,95 @@ main
 
 
             }
-            hr
-            {
-                margin-bottom:10px;
-            }
+           
 
         }
 
+      
     }
+    .section_end
+    {
+        margin-top:4rem;
+        border:1px solid black;
+
+    } 
+
+
+    // view_3..........
+
+
+    .view_3 
+    {
+        margin-top: 2rem;
+        @include flex;
+        flex-direction: column;
+        gap: 4rem;
+        width: 100%;
+        margin-bottom: 4rem;
+        
+    
+        .view_3_leftside {
+            h2 {
+                font-size: 3rem;
+                font-weight: 400;
+                text-transform: uppercase;
+                padding-bottom: 2rem;
+            }
+            p {
+                font-size: 1.5rem;
+                opacity: 0.8;
+                width: 70%;
+            }
+        }
+    
+        .videos_box {
+            display: grid;
+            grid-template-columns: repeat(1fr);
+            gap: 30px;  
+            align-items: center;
+            justify-content: center;
+
+            width:100%;
+        
+            .video 
+            {
+                
+        
+                video 
+                {
+                    width: 100%;
+                    height: 300px;  // Try setting a fixed height to see if it applies
+                    object-fit: cover; 
+                    border-radius:20px;
+                    padding-top: 1rem;
+                    
+                }
+                .name{
+                   
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                }
+                .post{
+                    padding-top: 1rem;
+                    text-transform: uppercase
+                }
+
+            }
+        }
+        .line
+        {
+          
+           margin-top:1rem;
+
+            div{
+                height:1px;
+                width:100%;
+                background-color: black;
+            }
+        }
+        
+    }
+    
 }
 
 @media (min-width:1020px) 
@@ -256,6 +339,66 @@ main
                
             }
            
+        }
+
+        .view_2
+        {
+            @include flex;
+           margin:0;
+           
+
+            .our_service_1
+            {
+                @include flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
+              
+               
+            }
+            .line
+            {
+          
+                margin-right:40px;
+     
+                 div
+                 {
+                    height:100%;
+                     width:1px;
+                     opacity:0.7;
+                     background-color: black;
+                     
+                 }
+             }
+            
+            
+        }
+
+        //..............view3....
+
+        .view_3{
+            @include flex;
+            flex-direction: row;
+           
+            .videos_box {
+
+                grid-template-columns: repeat(2,1fr);
+                column-gap:3rem;
+            }
+            .line
+            {
+          
+                margin-right:1rem;
+     
+                 div
+                 {
+                    height:100%;
+                     width:1px;
+                     opacity:0.7;
+                     background-color: black;
+                     
+                 }
+             }
         }
          
     }
