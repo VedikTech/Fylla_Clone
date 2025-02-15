@@ -11,10 +11,12 @@
     background-color: black;
     color:white;
     text-transform: uppercase;
-    padding:10px;
+    padding:10px 30px;
     text-align: center;
     height:40px;
     border:none;
+    border-radius: 10px;
+
 }
 @mixin heading_opacity{
     opacity:0.8;
@@ -287,7 +289,7 @@ main
                 video 
                 {
                     width: 100%;
-                    height: 300px;  // Try setting a fixed height to see if it applies
+                    aspect-ratio: 1.5/1;  // Try setting a fixed height to see if it applies
                     object-fit: cover; 
                     border-radius:20px;
                     padding-top: 1rem;
@@ -318,88 +320,212 @@ main
         }
         
     }
-    
-}
 
-@media (min-width:1020px) 
-{
-   .Content_box{
-    padding:3rem;
-   }
-    main
+
+    //..........view4......
+
+    .view_4
     {
-      
-        .view_1
-        {
-            
-            h1{
-                width:100%;
-                font-size: 7rem;
-               
-               
-            }
-           
-        }
-
-        .view_2
+        @include flex;
+        flex-direction: column;
+        margin-top:2rem;
+        gap:2rem;
+     
+        .view_4leftside
         {
             @include flex;
-           margin:0;
+            flex-direction: column-reverse;
+            gap:30px;
            
-
-            .our_service_1
+            p{
+                text-transform: uppercase;
+                padding-bottom: 1rem;
+            }
+            h3{
+                font-size: 3rem;
+                text-transform: uppercase;
+                font-weight: 450;
+                width:80%;
+            }
+            svg
             {
-                @include flex;
-                flex-direction: column;
-                justify-content: space-between;
+                width: 5rem;
+                aspect-ratio: 1/1;
+            }
+        }
+
+        .view_4rightside
+        {
+            @include flex;
+            flex-direction: column;
+           order:1;
+            gap:4rem;
+           
+            div
+            {
+             
                 
-              
-               
+                p
+                {
+                    opacity:0.8;
+                    font-size: 1.5rem;
+                   
+                }
+
             }
-            .line
+            div
             {
-          
-                margin-right:40px;
-     
-                 div
-                 {
-                    height:100%;
-                     width:1px;
-                     opacity:0.7;
-                     background-color: black;
-                     
-                 }
-             }
-            
-            
+                button
+                {
+                    @include btn;
+                    
+                }
+            }
         }
 
-        //..............view3....
-
-        .view_3{
-            @include flex;
-            flex-direction: row;
-           
-            .videos_box {
-
-                grid-template-columns: repeat(2,1fr);
-                column-gap:3rem;
-            }
-            .line
+        .line
+        {
+            order:2;
+            div
             {
-          
-                margin-right:1rem;
-     
-                 div
-                 {
-                    height:100%;
-                     width:1px;
-                     opacity:0.7;
-                     background-color: black;
-                     
-                 }
-             }
+
+                background-color: black;
+                height:1px ;
+                width:100%;
+
+                
+            }
         }
-         
     }
 }
+
+
+
+footer
+{
+    border:  2px solid red;
+   .footer_left_side
+   {
+            .logo_2{
+                @include flex;
+                color:red;
+                svg{
+                    width:50px;
+                    height:50px;
+                }
+            }
+   }
+}
+    
+
+    
+
+    @media (min-width:1020px) 
+    {
+       .Content_box
+       {
+        padding:3rem;
+       }
+        main
+        {
+          
+            .view_1
+            {
+                h1{
+                    width:100%;
+                    font-size: 7rem;
+                }
+            }
+    
+            .view_2
+            {
+                @include flex;
+               margin:0;
+    
+                .our_service_1
+                {
+                    @include flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+                .line
+                {
+                    margin-right:40px;
+                     div
+                     {
+                        height:100%;
+                         width:1px;
+                         opacity:0.7;
+                         background-color: black;
+                     }
+                 }
+            }
+    
+            //..............view3....
+    
+            .view_3
+            {
+                @include flex;
+                flex-direction: row;
+               
+                .videos_box 
+                {
+                    grid-template-columns: repeat(2,1fr);
+                    column-gap:3rem;
+                }
+                .line
+                {
+                    margin-right:1rem;
+                     div
+                     {
+                        height:100%;
+                         width:1px;
+                         opacity:0.7;
+                         background-color: black;
+                     }
+                 }
+            }
+    
+            //.........view_4.........
+    
+            .view_4
+            {
+                flex-direction: row;
+                margin-top: 4rem;
+                
+                width:100%;
+               height:30rem;
+                .view_4leftside
+                {
+                    flex-direction: column;
+                      justify-content: space-between;
+                      margin:0;
+                }
+                .view_4rightside
+                {
+                    order:2;
+                    justify-content: space-between;
+                }
+                .line
+                {
+                    div
+                    {
+                        order:1;
+                        width:1px ;
+                        height:100%;
+                        background-color: black;
+                    }
+                }
+            } 
+        }
+        
+        .main_end_hr
+        {
+             margin-top:3rem;
+            color:black;
+            border: 1.5px solid black;
+        }
+    }
+
+
+    
