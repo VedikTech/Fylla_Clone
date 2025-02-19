@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -19,11 +20,9 @@ body {
 nav {
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  text-transform: uppercase;
   justify-content: space-between;
-  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
   height: 90px;
 }
 nav .logo {
@@ -42,80 +41,39 @@ nav .logo p {
 nav .anchor_links_box {
   display: flex;
   justify-content: center;
-  align-items: center;
-  justify-content: flex-end;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
 }
 nav .anchor_links_box .links {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 4rem;
   display: none;
 }
 nav .anchor_links_box .links ul {
   display: flex;
   justify-content: center;
-  gap: 30px;
-}
-nav .anchor_links_box .links ul li {
-  list-style: none;
-}
-nav .anchor_links_box .links ul li a {
-  color: black;
-  text-decoration: none;
-}
-nav .anchor_links_box .talk_button button {
-  background-color: black;
-  color: white;
-  text-transform: uppercase;
-  padding: 10px 30px;
-  text-align: center;
-  height: 40px;
-  border: none;
-  border-radius: 10px;
-}
-nav .anchor_links_box .line {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  margin: 0 15px; /* Adds space around the line */
-}
-nav .anchor_links_box .line div {
-  background-color: black;
-  height: 100%;
-  width: 1px;
 }
 nav .second_links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-nav .second_links a {
-  color: black;
-  text-decoration: none;
-  border: 1px solid black;
-  border-radius: 50%;
-  padding: 10px;
-  font-size: 0.8rem;
-  margin-right: 10px;
+  display: none;
 }
 nav .night_btn {
   border: 1px solid black;
-  padding: 0.3rem 1rem;
-  border-radius: 15px;
-}
-nav .navicon {
+  border-radius: 10px;
+  width: 4rem;
+  height: 2rem;
   display: flex;
   justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
+  margin-right: 2rem;
+}
+nav .night_btn .fa-moon {
+  display: none;
 }
 nav .navicon i {
-  width: 9rem;
-  height: 9rem;
+  font-size: 2rem;
+  color: rgb(40, 39, 39);
+}
+nav .navicon .fa-xmark {
+  display: none;
 }
 
 hr {
@@ -332,14 +290,6 @@ main .view_4 .view_4rightside div button {
   border: none;
   border-radius: 10px;
 }
-main .view_4 .line {
-  order: 2;
-}
-main .view_4 .line div {
-  background-color: black;
-  height: 1px;
-  width: 100%;
-}
 
 .footer_box .footer {
   margin-top: 2rem;
@@ -432,126 +382,4 @@ main .view_4 .line div {
 }
 .footer_box .second_footer .PI {
   word-spacing: 30px;
-}
-
-@media (min-width: 1020px) {
-  body {
-    background-color: rgb(253, 251, 245);
-  }
-  .Content_box {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-  main .view_1 h1 {
-    width: 100%;
-    font-size: 7rem;
-  }
-  main .view_2 {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-  }
-  main .view_2 .our_service_1 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  main .view_2 .line {
-    margin-right: 40px;
-  }
-  main .view_2 .line div {
-    height: 100%;
-    width: 1px;
-    opacity: 0.7;
-    background-color: black;
-  }
-  main .view_3 {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-  }
-  main .view_3 .videos_box {
-    grid-template-columns: repeat(2, 1fr);
-    -moz-column-gap: 3rem;
-         column-gap: 3rem;
-  }
-  main .view_3 .line {
-    margin-right: 1rem;
-  }
-  main .view_3 .line div {
-    height: 100%;
-    width: 1px;
-    opacity: 0.7;
-    background-color: black;
-  }
-  main .view_4 {
-    flex-direction: row;
-    margin-top: 4rem;
-    width: 100%;
-    height: 40rem;
-  }
-  main .view_4 .view_4leftside {
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0;
-  }
-  main .view_4 .view_4leftside h3 {
-    font-size: 5rem;
-    width: 100%;
-    line-height: 5rem;
-  }
-  main .view_4 .view_4rightside {
-    order: 2;
-    justify-content: space-between;
-  }
-  main .view_4 .line div {
-    order: 1;
-    width: 1px;
-    height: 100%;
-    background-color: black;
-  }
-  .main_end_hr {
-    margin-top: 3rem;
-    color: black;
-    border: 1.5px solid black;
-  }
-  .footer_box {
-    margin-top: 4rem;
-  }
-  .footer_box .footer {
-    margin-bottom: 3rem;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .footer_box .footer .footer_left_side {
-    justify-content: space-between;
-  }
-  .footer_box .footer .line {
-    margin-right: -8rem;
-  }
-  .footer_box .footer .line div {
-    width: 1px;
-    background-color: black;
-    height: 100%;
-  }
-  .footer_box .footer .all_links {
-    flex-direction: row;
-    gap: 15rem;
-  }
-  .footer_box .footer .all_links ul p {
-    padding-bottom: 2rem;
-  }
-  .footer_box .footer .all_links ul button {
-    margin-top: 2rem;
-  }
-  .footer_box .footer .all_links hr {
-    display: none;
-  }
-  .footer_box .second_footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
-  }
 }/*# sourceMappingURL=style.css.map */

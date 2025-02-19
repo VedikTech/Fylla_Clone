@@ -1,0 +1,260 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+}
+@mixin anchor_style {
+  color: black;
+  text-decoration: none;
+}
+@mixin btn {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  text-align: center;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+}
+@mixin heading_opacity {
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1020px) {
+  body {
+    background-color: rgb(253, 251, 245);
+  }
+
+  nav {
+    @include flex;
+
+    align-items: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    justify-content: space-between;
+    width:100%;
+
+    height: 90px;
+
+    .logo {
+      @include flex;
+      gap: 15px;
+      svg {
+        width: 3rem;
+        height: 3rem;
+      }
+      p {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+    }
+    .anchor_links_box {
+      @include flex;
+      align-items: center;
+    
+      column-gap: 2rem;
+
+      .links {
+        @include flex;
+        align-items: center;
+        gap: 4rem;
+
+        ul {
+          @include flex;
+          gap: 30px;
+          li {
+            list-style: none;
+
+            a {
+              @include anchor_style;
+            }
+          }
+        }
+      }
+      .talk_button {
+        button {
+          @include btn;
+        }
+      }
+
+      //....................
+
+      .line {
+        
+
+        div {
+          display: block
+        }
+      }
+    }
+    .second_links {
+      @include flex;
+      align-items: center;
+
+      a {
+        
+        display: block;
+       
+      }
+    }
+    .night_btn {
+      border: 1px solid black;
+      padding: 0.3rem 1rem;
+      border-radius: 15px;
+      .fa-moon{
+         display: hidden;
+        
+      }
+    }
+    
+    .navicon {
+        @include flex;
+       margin-right:6rem;
+       display: none;
+        align-items: flex-end;
+      i{
+        font-size:30px;
+      }
+    }
+  }
+
+  .Content_box {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  main {
+    .view_1 {
+      h1 {
+        width: 100%;
+        font-size: 7rem;
+      }
+    }
+
+    .view_2 {
+      @include flex;
+      margin: 0;
+
+      .our_service_1 {
+        @include flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .line {
+        margin-right: 40px;
+        div {
+          height: 100%;
+          width: 1px;
+          opacity: 0.7;
+          background-color: black;
+        }
+      }
+    }
+
+    //..............view3....
+
+    .view_3 {
+      @include flex;
+      flex-direction: row;
+
+      .videos_box {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+      }
+      .line {
+        margin-right: 1rem;
+        div {
+          height: 100%;
+          width: 1px;
+          opacity: 0.7;
+          background-color: black;
+        }
+      }
+    }
+
+    //.........view_4.........
+
+    .view_4 {
+      flex-direction: row;
+      margin-top: 4rem;
+
+      width: 100%;
+      height: 40rem;
+
+      .view_4leftside {
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+
+        h3 {
+          font-size: 5rem;
+          width: 100%;
+          line-height: 5rem;
+        }
+      }
+      .view_4rightside {
+        order: 2;
+        justify-content: space-between;
+      }
+      .line {
+        div {
+          order: 1;
+          width: 1px;
+          height: 100%;
+          background-color: black;
+        }
+      }
+    }
+  }
+
+  .main_end_hr {
+    margin-top: 3rem;
+
+    border: 1.5px solid black;
+    display: block;
+  }
+
+  .footer_box {
+    margin-top: 4rem;
+    .footer {
+      margin-bottom: 3rem;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .footer_left_side {
+        justify-content: space-between;
+      }
+      .line {
+       
+        div {
+          width: 1px;
+          background-color: black;
+          height: 100%;
+        }
+      }
+      .all_links {
+        flex-direction: row;
+       gap: 12rem;
+        hr {
+          display: none;
+        }
+
+        ul {
+          p {
+            padding-bottom: 2rem;
+          }
+          button {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+
+    .second_footer {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+    }
+  }
+}
