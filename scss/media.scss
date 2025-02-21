@@ -16,10 +16,7 @@
   border: none;
   border-radius: 10px;
 
-  &:hover{
-    background-color: red !important;
-    color:red;
-  }
+  
 }
 @mixin heading_opacity {
   opacity: 0.8;

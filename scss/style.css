@@ -92,7 +92,7 @@ nav .anchor_links_box .talk_button button {
   border: 1px solid rgb(244, 240, 240);
 }
 nav .anchor_links_box .talk_button button:hover {
-  background-color: rgb(209, 200, 200) !important;
+  background-color: rgb(244, 238, 238) !important;
   color: red;
   border: 1px solid red;
 }
@@ -192,7 +192,7 @@ main .view_2 .our_service_1 div button {
   border-radius: 10px;
 }
 main .view_2 .our_service_1 div button:hover {
-  background-color: rgb(209, 200, 200) !important;
+  background-color: rgb(244, 238, 238) !important;
   color: red;
   border: 1px solid red;
 }
@@ -327,7 +327,7 @@ main .view_4 .view_4rightside div button {
   border-radius: 10px;
 }
 main .view_4 .view_4rightside div button:hover {
-  background-color: rgb(209, 200, 200) !important;
+  background-color: rgb(244, 238, 238) !important;
   color: red;
   border: 1px solid red;
 }
@@ -408,7 +408,7 @@ main .view_4 .view_4rightside div button:hover {
   border-radius: 10px;
 }
 .footer_box .footer .all_links ul button:hover {
-  background-color: rgb(209, 200, 200) !important;
+  background-color: rgb(244, 238, 238) !important;
   color: red;
   border: 1px solid red;
 }
