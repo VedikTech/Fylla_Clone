@@ -5,6 +5,9 @@
 @mixin anchor_style {
   color: black;
   text-decoration: none;
+  &:hover{
+    color:red;
+  }
 }
 @mixin btn {
   background-color: black;
@@ -15,6 +18,13 @@
   height: 40px;
   border: none;
   border-radius: 10px;
+
+  &:hover{
+    background-color: rgb(209, 200, 200) !important;
+    color:red;
+    border:1px solid red;
+
+  }
 }
 @mixin heading_opacity {
   opacity: 0.8;
@@ -32,8 +42,13 @@ body {
   width: 100%;
   height: 100%;
 }
+.bodynight{
+  background-color: black !important;
+  color:white !important;
+}
 
-body {
+
+.bodyday {
   background-color: rgb(253, 251, 245);
   padding: 1rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -61,64 +76,85 @@ nav {
   }
   .anchor_links_box {
    @include flex;
+  
+  .links{
+    display: none;
+  }
+  
+    .links2 {
 
-    .links {
+  
       @include flex;
-      display: none;
-     
+      flex-direction: column;
+      position: absolute;
+      top: 90px; // Below the navbar
+      left: 0;
+      width: 100%;
+      background-color: black;
+      padding: 20px;
+      gap:3rem;
+      text-align: center;
+     padding:3rem;
+    
+   
+   
+
       ul {
         @include flex;
+        flex-direction: column;
+        gap:3rem;
+
         
         li {
-          
+          list-style-type: none;
+         
+          :hover {
+            color:red;
+         
+        }
 
           a {
-           
+           text-decoration: none;
+            color:white;
+            
+            
           }
         }
       }
     }
     .talk_button {
+      
       button {
-        
+        @include btn;
+        border:1px solid rgb(244, 240, 240);
       }
     }
 
     //....................
 
-    .line {
-      
-
-      div {
-        
-      }
-    }
+    
   }
   .second_links {
    display: none;
 
-    a {
-      
-      
-     
-    }
+    
   }
-  .night_btn {
+  // .night_btn {
    
-    border:1px solid black;
-    border-radius: 10px;
-    width:4rem;
-    height: 2rem;
-    @include flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-right:2rem;
+  //   border:1px solid black;
+  //   border-radius: 20px;
+  //   width:4rem;
+  //   height: 2rem;
+  //   @include flex;
+  //   justify-content: space-around;
+  //   align-items: center;
+  //   margin-right:2rem;
  
-    .fa-moon{
-       display: none;
+  //   .fa-moon{
+  //      display: none;
       
-    }
-  }
+  //   }
+  // }
   
   .navicon {
     
